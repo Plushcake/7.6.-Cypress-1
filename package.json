@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open",
+    "test": "cypress open --config-file",
     "test:cypress": "cypress open --browser chrome",
-    "test:allHeaded": "cypress run --headed --browser chrome",
+    "test:allHeaded": "cypress run --headed --browser chrome --config-file cypress.desktop.js",
     "test:allHeadless": "npx cypress run --headless -b chrome",
-    "test:allHeadedEdge": "cypress run --headed --browser edge",
-    "test:spec": "cypress run --headed --browser edge --spec cypress/e2e/booksAdd.cy.js",
-    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
-    "cypress:run:desktop": "cypress open --config viewportWidth=1920,viewportHeight=1080"
+    "test:allHeadedEdge": "cypress run --headed --browser edge --config-file cypress.mobile.js",
+    "test:spec": "cypress run --headed --browser edge --spec cypress/e2e/Book.cy.js"
   },
   "author": "",
   "license": "ISC",
